@@ -18,6 +18,7 @@ setup(
     license='MIT',
     packages=['asynczane'],
     install_requires=['aiohttp'],
+    python_requires='>=3.6'
 )
 
 
