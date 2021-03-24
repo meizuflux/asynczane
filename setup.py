@@ -12,6 +12,7 @@ setup(
     version=version,
     author='ppotatoo',
     description=description,
+    long_description_content_type='text/markdown',
     long_description=long_description,
     url='https://github.com/ppotatoo/asynczane',
     license='MIT',
