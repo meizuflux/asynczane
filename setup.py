@@ -13,6 +13,7 @@ setup(
     author='ppotatoo',
     description=description,
     long_description=long_description,
+    license='MIT',
     packages=['asynczane'],
     install_requires=['aiohttp'],
 )
