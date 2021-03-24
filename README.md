@@ -37,8 +37,7 @@ bot.zane = asynczane.ZaneClient(token='your token here')
 
 @bot.command()
 async def deepfry(ctx, user: discord.Member=None):
-    if not user:
-        user = ctx.author
+    user = user or ctx.author
     url = str(user.avatar_url)
     
     try:
@@ -54,3 +53,6 @@ async def deepfry(ctx, user: discord.Member=None):
 bot.run("your discord token")
 
 ```
+
+## Dependencies
+```aiohttp```
