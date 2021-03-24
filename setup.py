@@ -5,7 +5,7 @@ description = 'Asynchronous wrapper for Zane API.'
 with open("README.md", 'r') as readme:
     long_description = readme.read()
 
-version = "0.0.1"
+version = "1.0"
 
 setup(
     name='asynczane',
