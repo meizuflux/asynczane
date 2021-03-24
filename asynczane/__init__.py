@@ -36,7 +36,7 @@ class ZaneClient:
 
     async def floor(self, url: str) -> BytesIO:
         params = {"url": url}
-        await self.do_zane('floor', params)
+        return await self.do_zane('floor', params)
 
     async def braille(self, url: str) -> str:
         params = {"url": url}
@@ -51,51 +51,51 @@ class ZaneClient:
 
     async def deepfry(self, url: str) -> BytesIO:
         params = {"url": url}
-        await self.do_zane('deepfry', params)
+        return await self.do_zane('deepfry', params)
 
     async def dots(self, url: str) -> BytesIO:
         params = {"url": url}
-        await self.do_zane('dots', params)
+        return await self.do_zane('dots', params)
 
     async def jpeg(self, url: str) -> BytesIO:
         params = {"url": url}
-        await self.do_zane('jpeg', params)
+        return await self.do_zane('jpeg', params)
 
     async def spread(self, url: str) -> BytesIO:
         params = {"url": url}
-        await self.do_zane('spread', params)
+        return await self.do_zane('spread', params)
 
     async def cube(self, url: str) -> BytesIO:
         params = {"url": url}
-        await self.do_zane('cube', params)
+        return await self.do_zane('cube', params)
 
     async def sort(self, url: str) -> BytesIO:
         params = {"url": url}
-        await self.do_zane('sort', params)
+        return await self.do_zane('sort', params)
 
     async def palette(self, url: str) -> BytesIO:
         params = {"url": url}
-        await self.do_zane('palette', params)
+        return await self.do_zane('palette', params)
 
     async def invert(self, url: str) -> BytesIO:
         params = {"url": url}
-        await self.do_zane('invert', params)
+        return await self.do_zane('invert', params)
 
     async def posterize(self, url: str) -> BytesIO:
         params = {"url": url}
-        await self.do_zane('posterize', params)
+        return await self.do_zane('posterize', params)
 
     async def grayscale(self, url: str) -> BytesIO:
         params = {"url": url}
-        await self.do_zane('grayscale', params)
+        return await self.do_zane('grayscale', params)
 
     async def swirl(self, url: str) -> BytesIO:
         params = {"url": url}
-        await self.do_zane('swirl', params)
+        return await self.do_zane('swirl', params)
 
     async def sobel(self, url: str) -> BytesIO:
         params = {"url": url}
-        await self.do_zane('sobel', params)
+        return await self.do_zane('sobel', params)
 
     async def close(self):
         await self.session.close()
