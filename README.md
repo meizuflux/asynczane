@@ -61,14 +61,12 @@ bot.run("your discord token")
 
 ## Custom loop and session:
 ```python
-import asyncio
+from asyncio import get_event_loop
 from aiohttp import ClientSession
 
 from asynczane import ZaneClient
 
-loop = asyncio.get_event_loop()
-
-client = ZaneClient(token="12345", session=ClientSession(), loop=loop)
+client = ZaneClient(token="12345", session=ClientSession(), loop=get_event_loop())
 ```
 
 ## Dependencies
