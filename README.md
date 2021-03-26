@@ -10,16 +10,21 @@ python3 -m pip install asynczane
 ## Example:
 
 ```python
-from asynczane import ZaneClient, Forbidden, InternalServerError
+import asyncio
+
+from asynczane import ZaneClient
 
 client = ZaneClient("my precious token")
 
-try:
-    image = await client.deepfry("some random url")
-except Forbidden as error:
-    print(error)
-except InternalServerError as error:
-    print(error)
+async def deepfry(url: str):
+    try:
+        image = await client.deepfry("some random url")
+    except (asynczane.Forbidden, asynczane.InternalServerError) as error:
+        return await ctx.send(error)
+    return image
+
+loop = asyncio.get_event_loop()
+loop.run_until_complete(deepfry())
 
 ```
 
@@ -52,6 +57,18 @@ async def deepfry(ctx, user: discord.Member=None):
     
 bot.run("your discord token")
 
+```
+
+## Custom loop and session:
+```python
+import asyncio
+from aiohttp import ClientSession
+
+from asynczane import ZaneClient
+
+loop = asyncio.get_event_loop()
+
+client = ZaneClient(token="12345", session=ClientSession(), loop=loop)
 ```
 
 ## Dependencies
